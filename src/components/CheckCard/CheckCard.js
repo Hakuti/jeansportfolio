@@ -48,7 +48,7 @@ export default class CheckCard extends Component {
                 </div>
 
                 <div className="inner-checkcard-text">
-                <p className="fonts-1">Patron</p>
+                <p className="fonts-1">Patrono</p>
                 <br></br>
                 <p className="fonts-2">Anejo</p>
                 </div>
