@@ -1,26 +1,102 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Home from "./components/Home";
+import About from "./components/About";
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route,  Switch, Link } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-function App() {
+// const Topic = ({match}) => (
+//   <div style={{position: "absolute"}}>
+//     <h3>
+//       {match.params.topicId}
+//     </h3>
+//   </div>
+// )
+
+// const Topics = ({ match }) => (
+//   <div>
+//     <h2>Topics</h2>
+//     <ul>
+//     <li><Link to={`${match.url}/rendering`}>Rendering with React</Link></li>
+//     <li><Link to={`${match.url}/components`}>Components</Link></li>
+//     <li><Link to={`${match.url}/props-v-state`}>Props v. State</Link></li>
+//     </ul>
+
+//     <Route path='/topics/:topicId' component={Topic}></Route>
+//     <Route exact path={match.url} render={()=> (
+//       <h3> Please select a topic </h3>
+//     )}/>
+
+//   </div>
+// )
+
+
+class App extends Component {
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<Router>  
+<Route render={({location}) => (
+ <div style={styles.fill}>
+   <ul style={styles.nav}>
+   <li style={styles.navItem}><Link to="/">Home</Link></li>
+   <li style={styles.navItem}><Link to="/About">About</Link></li>
+  </ul>
+
+
+  <div style={styles.content}> 
+  <TransitionGroup>
+    <CSSTransition
+    key={location.key}
+    classNames="slide"
+    timeout={300}
+    >
+    <Switch location={location}>
+    <Route exact path='/' component={Home} />
+    <Route path='/About' component={About} />
+    </Switch>
+    </CSSTransition>
+  </TransitionGroup>
+
+ </div>
+  
+</div>
+)}/>
+
+</Router>
   );
+  }
 }
 
+const styles = {}
+
+styles.nav = {
+  padding: 0,
+  margin: 0,
+  position: 'absolute',
+  borderBottom: "1px solid lightgray",
+  top: 0,
+  height: '50px',
+  width: '100%',
+  display: 'flex'
+}
+
+styles.navItem = {
+  textAlign: 'center',
+  flex: 1,
+  listStyleType: 'none',
+  padding: '10px'
+}
+styles.fill = {
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0
+}
+
+styles.content = {
+  ...styles.fill,
+  top: "40px"
+}
 export default App;
