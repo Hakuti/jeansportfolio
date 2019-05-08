@@ -131,12 +131,22 @@ br {
 }
 
 .searchbox-wrapper {
+    margin-top: 10px !important;
     width: 55%;
     border: 3px solid #3F51B2;
     border-radius: 5px;
     margin: 10px auto;
     display: flex;
 }
+
+
+
+.button-arrows {
+    color: #50575F !important;
+    opacity: .5;
+}
+
+
 .searchbox-alcohol {
     margin-top: 10px !important;
     /* border: 3px solid #3F51B2 !important; */
@@ -153,9 +163,16 @@ br {
     background: none;
     border: none;
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    /* background: blue; */
     color: #3F51B2 !important;
     /* margin-top: 0px; */
+}
+
+.button-directional p {
+    display: inline;
+    color: #3F51B2;
 }
 
 .searchbox-alcohol::placeholder {
