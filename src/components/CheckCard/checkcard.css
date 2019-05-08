@@ -12,8 +12,16 @@
 
 .outer-alcohol-list-div {
     padding: 0px 300px;
-    /* overflow-y: scroll;
-    height: 700px; */
+    margin-top: 15px !important;
+    overflow-y: scroll;
+    position: absolute;
+    /* padding: 0px 100px; */
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    /* height: 700px; */
     /* display: flex;
     justify-content: center;
     border: 3px solid orange;
@@ -26,11 +34,18 @@
     
 
 }
-
+/* 
 .inner-alcohol-list-div {
-    overflow-y: scroll;
-    height: 700px;
-}
+    overflow-y: scroll; */
+    /* height: 700px; */
+    /* position: absolute;
+    padding: 0px 100px;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+} */
 .checkcard-div p{
     /* border: 3px solid blue; */
     display: inline;

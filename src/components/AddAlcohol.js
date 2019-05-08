@@ -165,15 +165,15 @@ export default class AddAlcohol extends Component {
             <input className="searchbox-alcohol" placeholder="Type an alcohol here" onChange={this.filterList}>
             </input>
             </div>
-            <div className="row  outer-alcohol-list-div">
-            <div className="inner-alcohol-list-div">
+            <div className="row outer-alcohol-list-div">
+            {/* <div className="inner-alcohol-list-div"> */}
             {/*
             This component gets passed a prop called handleCheckBox change
             which brings allow a function called this.toggleCheckBox
             */}
 
             {this.createMultipleBoxes()}
-            </div>
+            {/* </div> */}
           
         
             </div>
@@ -187,7 +187,7 @@ export default class AddAlcohol extends Component {
 
 const styles = {}
 styles.fill = {
-    background: "white",
+    background: "",
     position: 'absolute',
     left: 0,
     right: 0,
