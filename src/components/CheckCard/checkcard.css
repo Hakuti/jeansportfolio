@@ -12,8 +12,8 @@
 
 .outer-alcohol-list-div {
     padding: 0px 300px;
-    overflow-y: scroll;
-    height: 700px;
+    /* overflow-y: scroll;
+    height: 700px; */
     /* display: flex;
     justify-content: center;
     border: 3px solid orange;
@@ -25,6 +25,11 @@
     overflow-x: scroll; */
     
 
+}
+
+.inner-alcohol-list-div {
+    overflow-y: scroll;
+    height: 700px;
 }
 .checkcard-div p{
     /* border: 3px solid blue; */

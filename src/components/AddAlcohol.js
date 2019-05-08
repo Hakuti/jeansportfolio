@@ -70,16 +70,19 @@ export default class AddAlcohol extends Component {
         // this.nameInput.focus();
         this.selectedBoxes = new Set();
         this.setState({itemsState: this.state.initialItems});
+        if(localStorage.getItem('test')){
         let retrievedObject = localStorage.getItem('test');
         let ObjectParsed = JSON.parse(retrievedObject);
         for(let item of ObjectParsed){
             this.selectedBoxes.add(item);
         }
+        }
+        
         // this.selectedBoxes.add(ObjectParsed);
         // retrievedObject = JSON.parse(retrievedObject);
         // console.log(retrievedObject[0]);
         // this.selectedBoxes.add(retrievedObject);
-        console.log('retrieveObject: ', JSON.parse(retrievedObject));
+        // console.log('retrieveObject: ', JSON.parse(retrievedObject));
       }
 
     componentWillUnmount(){
@@ -163,12 +166,14 @@ export default class AddAlcohol extends Component {
             </input>
             </div>
             <div className="row  outer-alcohol-list-div">
+            <div className="inner-alcohol-list-div">
             {/*
             This component gets passed a prop called handleCheckBox change
             which brings allow a function called this.toggleCheckBox
             */}
 
             {this.createMultipleBoxes()}
+            </div>
           
         
             </div>
