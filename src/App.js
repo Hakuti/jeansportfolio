@@ -43,7 +43,7 @@ class App extends Component {
   <nav>
     <div className="nav-wrapper blue">
       <a className="brand-logo"><Link to="/About">Create</Link></a>
-      <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+      <Link to="/"><a className="sidenav-trigger"><i className="material-icons">menu</i></a></Link>
       <ul className="right hide-on-med-and-down">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/About">Create</Link></li>
