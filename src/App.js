@@ -46,7 +46,7 @@ class App extends Component {
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/About">About</Link></li>
+        <li><Link to="/About">Create</Link></li>
         {/* <li><a href="collapsible.html">Javascript</a></li>
         <li><a href="mobile.html">Mobile</a></li> */}
       </ul>
