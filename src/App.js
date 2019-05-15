@@ -42,7 +42,7 @@ class App extends Component {
 
   <nav>
     <div className="nav-wrapper blue">
-      <a style={{marginLeft: "20px"}}className="brand-logo"><Link to="/About">Create</Link></a>
+      <a className="brand-logo"><Link to="/About">Create</Link></a>
       <Link to="/"><a className="sidenav-trigger"><i className="material-icons">menu</i></a></Link>
       <ul className="right hide-on-med-and-down">
         <li><Link to="/">Home</Link></li>
