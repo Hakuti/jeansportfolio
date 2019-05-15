@@ -4,6 +4,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import ArrowKeysReact from 'arrow-keys-react';
 import AddName from './AddName';
 import AddAlcohol from './AddAlcohol';
+import Themes from './Themes';
 /*
 Jean Github @Hakuti
 This following file is the navigator between allowing a user to create a party
@@ -197,7 +198,8 @@ export default class About extends Component {
                     <h5 style={styles.titleHeader}> Enter your name</h5>
                     : location.pathname === "/About/addpartyname" ?
                     <h5 style={styles.titleHeader}> Enter your party name</h5>
-                    : ""
+                    :<h5 style={styles.titleHeader}>Select Themes</h5>
+
                     }
                     {/* <h5 style={styles.titleHeader}>{location.pathname == "/About/addalcohol" ? "Select your Alcohol": "" }</h5> */}
                     <button className="button-directional" onClick={this.onBackClick} disabled={this.state.currentPage == 0 ? true : false}><Link to={`${match.url}/${routes[this.state.currentPage > boundaryPage ? this.state.currentPage - 1: boundaryPage]}`}><p className="button-arrows">{`<- `}</p><p>{`Prev`}</p></Link></button>
@@ -215,7 +217,7 @@ export default class About extends Component {
                     <Route path='/about/addname' component={AddName}></Route>
                     <Route path={`/about/addpartyname`} component={AddName}></Route>
                     <Route path={`/about/addalcohol`} render={(props) => <AddAlcohol {...props} ref={this.child} saveItems={this.saveItemsToStore}/>}/>
-                    <Route path={`/about/randomroute`} component={Topic}></Route>
+                    <Route path={`/about/randomroute`} component={Themes}></Route>
                     </Switch>
                     </CSSTransition>
                     </TransitionGroup>

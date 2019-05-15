@@ -46,6 +46,66 @@
     bottom: 0;
     -webkit-overflow-scrolling: touch;
 } */
+
+.tagBox {
+    border-radius: 7px;
+    /* width: 75px; */
+    min-width: 50px;
+    height: 34px; 
+    background: white;
+    border: 2px solid #3F51B2;
+
+}
+
+.themes-div {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background: blue; */
+    /* border: solid 3px black; */
+    /* margin-left: 450px;
+    margin-right: 450px; */
+}
+
+.chipBox {
+    border-radius: 7px;
+    border: 2px solid #3F51B2;
+    padding: 5px 10px;
+    /* margin: 0 auto; */
+    font-family: 'Roboto'
+    
+}
+
+.chipBox-active {
+    color: white;
+    background: #3F51B2;
+    border: #3F51B2 2px solid;
+
+}
+
+.tagBox-active {
+    background-color: #3F51B2;
+    color: white;
+    /* display: inline !important */
+}
+
+.tagBox-active p {
+    display: block !important;
+    color: white !important;
+}
+
+.tagBox p {
+    position: relative;
+    top: -10px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #50575F;
+    
+}
+
+
 .checkcard-div p{
     /* border: 3px solid blue; */
     display: inline;
