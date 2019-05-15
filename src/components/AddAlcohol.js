@@ -39,7 +39,13 @@ Okay so I was able to add a checkmark that would activate if it was clicked.
 
 let alcoholItems = [
     {id: "1", title: "Patron", subset: "Anejo", img: "https://cdn2.bigcommerce.com/server5500/tpbc2s65/products/641/images/674/PatronAnejo__37566__97112.1358534099.1280.1280.jpg?c=2"}
-    ,{id: "2", title: "Ciroc", subset: "Apple", img: "https://www.lcbo.com/content/dam/lcbo/products/481614.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"}
+    ,{id: "2", title: "Ciroc", subset: "Apple", img: "https://www.lcbo.com/content/dam/lcbo/products/481614.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"},
+    {id: "3", title: "Ciroc", subset: "Moschino", img: "https://img.thewhiskyexchange.com/900/vodka_cir27.jpg"}, {
+        id: "4", title: "Ciroc", subset: "Black Raspberry", img: "https://cdn.shopify.com/s/files/1/0013/2477/7569/products/ciroc-black-raspberry_v2_large.jpg?v=1542766635"
+    },
+    {id: "5", title: "Bacardi", subset: "Major Lazer", img: "https://cdn11.bigcommerce.com/s-e6b77/images/stencil/1280x1280/products/20574/20985/bacardi-limited-edition-major-lazer-rum__94416.1503926050.jpg?c=2"}, 
+    {
+       id: "6", title: "Bacardi", subset: "Dragonberry", img: "https://www.totalwine.com/media/sys_master/twmmedia/h6a/h30/9977673711646.png"}
 ]
 
 //This is the hack version of making this work
