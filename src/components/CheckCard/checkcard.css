@@ -168,7 +168,7 @@ br {
     border-bottom: none !important;
     position: relative;
     left: 10px;
-    font-size: 20px !important;
+    font-size: 22px !important;
 
 }
 
@@ -181,7 +181,7 @@ br {
     border-bottom: none !important;
     position: relative;
     left: 10px;
-    /* font-size: 22px !important; */
+    font-size: 35px !important;
 
 }
 
@@ -235,16 +235,16 @@ br {
 input:focus {
     border-bottom: none !important;
     box-shadow: none !important;
-    font-size: 25px !important;
+    /* font-size: 35px !important; */
 }
 
-input[type='text']:focus,
+/* input[type='text']:focus,
 input[type='number']:focus,
 textarea:focus {
-    font-size: 25px !important;
+    font-size: 16px !important;
     border-bottom: none !important;
     box-shadow: none !important;
-}
+} */
 
 /* disable auto-zoom on iphone input field focus */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -252,7 +252,7 @@ textarea:focus {
 	select:focus,
 	textarea:focus,
 	input:focus {
-        font-size: 25px !important;
+        font-size: 35px !important;
         
 	}
 }
