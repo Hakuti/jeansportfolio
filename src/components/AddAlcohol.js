@@ -37,39 +37,58 @@ Okay so I was able to add a checkmark that would activate if it was clicked.
 
 */
 
-let randomItems = [
-    "Hip-Hop",
-    "Trap",
-    "Heavy",
+let alcoholItems = [
+    {id: "1", title: "Patron", subset: "Anejo", img: "https://cdn2.bigcommerce.com/server5500/tpbc2s65/products/641/images/674/PatronAnejo__37566__97112.1358534099.1280.1280.jpg?c=2"}
+    ,{id: "2", title: "Ciroc", subset: "Apple", img: "https://www.lcbo.com/content/dam/lcbo/products/481614.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"}
 ]
+
+//This is the hack version of making this work
+let convertToArray = () => {
+    let alcoholDict = alcoholItems;
+    // let initialItems = [];
+    // for(let item of alcoholItems){
+    //     initialItems.push(item.title) 
+    // }
+
+    return alcoholItems;
+    
+}
+
 
 
 
 export default class AddAlcohol extends Component {
     
     state = {
-        initialItems: [
-            "Hip-Hop",
-            "Trap",
-            "Heavy",
-            "Bird",
-            "Red",
-            "Friends",
-            "More",
-            "Testing",
-            "Stuff",
-            "MoreSt00f",
-            "Ack","po",
-            "poo"
+        // initialItems: [
+        //     "Hip-Hop",
+        //     "Trap",
+        //     "Heavy",
+        //     "Bird",
+        //     "Red",
+        //     "Friends",
+        //     "More",
+        //     "Testing",
+        //     "Stuff",
+        //     "MoreSt00f",
+        //     "Ack","po",
+        //     "poo"
             
-        ],
+        // ]
+        initialItems: convertToArray()
+        ,
         itemsState: []
     };
+
+    
+
+
 
     componentDidMount(){
         // this.nameInput.focus();
         this.selectedBoxes = new Set();
         this.setState({itemsState: this.state.initialItems});
+
         if(localStorage.getItem('test')){
         let retrievedObject = localStorage.getItem('test');
         let ObjectParsed = JSON.parse(retrievedObject);
@@ -101,7 +120,7 @@ export default class AddAlcohol extends Component {
             this.selectedBoxes.add(label);
         }
 
-        // console.log(this.selectedBoxes);
+        console.log(this.selectedBoxes);
     }
 
     handleFormSubmit = formSubmitEvent => {
@@ -115,7 +134,7 @@ export default class AddAlcohol extends Component {
 
         let updatedList = this.state.initialItems;
         updatedList = updatedList.filter(items => {
-            return items.toLowerCase().search(e.target.value.toLowerCase()) !== -1;
+            return items.title.toLowerCase().search(e.target.value.toLowerCase()) !== -1;
         })
         this.setState({itemsState: updatedList});
         
@@ -126,19 +145,24 @@ export default class AddAlcohol extends Component {
         // console.log("Here");
         // console.log(`label: ${label}`)
         let valueToggled = false;
-        if(this.selectedBoxes.has(label)){
+        if(this.selectedBoxes.has(label.id)){
             valueToggled = true;
             // console.log(valueToggled)
             // console.log("isToggled");
         }
+        console.log(label);
 
         return(
             <div className="col s6 m4 l3 ">
+            
             <CheckCard
-                label={label}
+                label={label.id}
                 handleCheckBoxChange={this.toggleCheckBox}
                 isCurrentlyInSet={valueToggled}
-                key={label}
+                key={label.id}
+                title={label.title}
+                subset={label.subset}
+                Img={label.img}
 
             ></CheckCard>
             </div>

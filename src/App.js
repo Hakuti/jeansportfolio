@@ -41,10 +41,10 @@ class App extends Component {
     
 
   <nav>
-    <div class="nav-wrapper blue">
-      <a href="#!" class="brand-logo"><Link to="/About">Create</Link></a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+    <div className="nav-wrapper blue">
+      <a className="brand-logo"><Link to="/About">Create</Link></a>
+      <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+      <ul className="right hide-on-med-and-down">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/About">Create</Link></li>
         {/* <li><a href="collapsible.html">Javascript</a></li>
@@ -53,11 +53,11 @@ class App extends Component {
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
+  <ul className="sidenav" id="mobile-demo">
+    {/* <li><a href="sass.html">Sass</a></li>
     <li><a href="badges.html">Components</a></li>
     <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+    <li><a href="mobile.html">Mobile</a></li> */}
   </ul>
    {/* <ul style={styles.nav}>
    <li style={styles.navItem}><Link to="/">Home</Link></li>

@@ -28,7 +28,7 @@ export default class CheckCard extends Component {
                 checked: true
             })
         }
-        // console.log(label);
+        console.log(label);
         handleCheckBoxChange(label);
         
     }
@@ -43,14 +43,14 @@ export default class CheckCard extends Component {
                 <i className="material-icons check-placement">check_circle</i> : ""
                 }
                 <div className="inner-checkcard">
-                <img className="img-size" src="https://cdn2.bigcommerce.com/server5500/tpbc2s65/products/641/images/674/PatronAnejo__37566__97112.1358534099.1280.1280.jpg?c=2"/>
+                <img className="img-size" src={this.props.Img}/>
                 
                 </div>
 
                 <div className="inner-checkcard-text">
-                <p className="fonts-1">Patrono</p>
+                <p className="fonts-1">{this.props.title}</p>
                 <br></br>
-                <p className="fonts-2">Anejo</p>
+                <p className="fonts-2">{this.props.subset}</p>
                 </div>
 
                 </div>
