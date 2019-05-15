@@ -235,13 +235,16 @@ br {
 input:focus {
     border-bottom: none !important;
     box-shadow: none !important;
+    font-size: 20px !important;
 }
 
-input[type='text']:focus,
+/* input[type='text']:focus,
 input[type='number']:focus,
 textarea:focus {
-	font-size: 16px;
-}
+    font-size: 20px;
+    border-bottom: none !important;
+    box-shadow: none !important;
+} */
 
 /* disable auto-zoom on iphone input field focus */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -249,7 +252,8 @@ textarea:focus {
 	select:focus,
 	textarea:focus,
 	input:focus {
-		font-size: 16px;
+        font-size: 20px;
+        
 	}
 }
 
