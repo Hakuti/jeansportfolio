@@ -190,10 +190,18 @@ export default class About extends Component {
                     {/*
                     Okay my current logic has the information out of sync with the routes array
                     */}
-
-                    <h5 style={styles.titleHeader}>{location.pathname == "/About/addalcohol" ? "Select your Alcohol": "" }</h5>
+                    
+                    {location.pathname === "/About/addalcohol" ? 
+                    <h5 style={styles.titleHeader}> Select your alcohol</h5>
+                    : location.pathname === "/About/addname" ?
+                    <h5 style={styles.titleHeader}> Enter your name</h5>
+                    : location.pathname === "/About/addpartyname" ?
+                    <h5 style={styles.titleHeader}> Enter your party name</h5>
+                    : ""
+                    }
+                    {/* <h5 style={styles.titleHeader}>{location.pathname == "/About/addalcohol" ? "Select your Alcohol": "" }</h5> */}
                     <button className="button-directional" onClick={this.onBackClick} disabled={this.state.currentPage == 0 ? true : false}><Link to={`${match.url}/${routes[this.state.currentPage > boundaryPage ? this.state.currentPage - 1: boundaryPage]}`}><p className="button-arrows">{`<- `}</p><p>{`Prev`}</p></Link></button>
-                    <div style={styles.liner}></div>
+                    <div className="liner"></div>
                     <button className="button-directional" onClick={this.onForwardClick} disabled={this.state.currentPage == maxPage ? true : false}><Link to={`${match.url}/${routes[ this.state.currentPage < maxPage ? this.state.currentPage + 1: maxPage]}`}><p>{`Next`}</p><p className="button-arrows">{` ->`}</p></Link></button>
                     {/* {console.log(this.state.currentPage)} */}
                     <div style={styles.content}>
@@ -229,14 +237,17 @@ styles.titleHeader = {
     
     color: "#50575F",
     fontFamily: "Roboto",
-    fontWeight: "500"
+    fontWeight: "500",
+    textAlign: "center"
 }
 styles.liner = {
     display: "inline-block",
-    backgroundColor: "gray",
-    width: "10px !important",
-    height: "3px !important"
+    backgroundColor: "gray !important",
+    border: "6px solid black",
+    width: "30px !important",
+    height: "5px !important"
 }
+
 styles.fill = {
     marginTop: "15px",
     background: "",

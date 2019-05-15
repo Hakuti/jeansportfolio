@@ -149,6 +149,7 @@ export default class AddAlcohol extends Component {
     ChildFunction = () => {
         console.log("I'm a child function");
     }
+
     saveOurItemsToLocal = () => {
         const { saveItems } = this.props;
         saveItems(this.state.initialItems);

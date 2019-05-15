@@ -13,8 +13,13 @@ export default class AddName extends Component {
         return(
             <div style={styles.fill}>
             
-                <input style={styles.input} ref={(input) => { this.nameInput = input}} >
-                </input>
+            <div className="inputBox-Wrapper">
+            <input className="inputBox" placeholder="Enter your party name" ref={(input) => { this.nameInput = input}}>
+            </input>
+            </div>
+
+                {/* <input className="" ref={(input) => { this.nameInput = input}} >
+                </input> */}
             </div>
         );
     }
@@ -22,7 +27,7 @@ export default class AddName extends Component {
 
 const styles = {}
 styles.fill = {
-    background: "red",
+    background: "white",
     position: 'absolute',
     left: 0,
     right: 0,
@@ -32,5 +37,15 @@ styles.fill = {
   }
 
   styles.input = {
-      width: "100px",
+      width: "300px",
+
   }
+
+//   styles.searchboxwrapper = {
+//     marginTop: "1px !important",
+//     width: "75%",
+//     border: "3px solid #3F51B2",
+//     borderRadius: "5px",
+//     margin: "100px auto",
+//     display: "flex",
+//   }

@@ -131,7 +131,7 @@ br {
 }
 
 .searchbox-wrapper {
-    margin-top: 10px !important;
+    margin-top: 1px !important;
     width: 55%;
     border: 3px solid #3F51B2;
     border-radius: 5px;
@@ -140,10 +140,23 @@ br {
 }
 
 
-
 .button-arrows {
     color: #50575F !important;
     opacity: .5;
+}
+
+.liner {
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    /* top: -4px; */
+    background-color: #50575F;
+    width: 25px !important;
+    height: 3px !important;
+    opacity: .5;
+    margin-left: 3px;
+    margin-right: 3px;
+    
 }
 
 
@@ -158,6 +171,29 @@ br {
     font-size: 20px !important;
 
 }
+
+
+.inputBox {
+    margin-top: 10px !important;
+    /* border: 3px solid #3F51B2 !important; */
+    width: 90% !important;
+    border-radius: 3px !important;
+    border-bottom: none !important;
+    position: relative;
+    left: 10px;
+    font-size: 20px !important;
+
+}
+
+.inputBox-Wrapper {
+    margin-top: 1px !important;
+    width: 55%;
+    border: 3px solid #3F51B2;
+    border-radius: 5px;
+    margin: 80px auto !important;
+    display: flex;
+}
+
 
 .button-directional {
     background: none;
@@ -179,6 +215,16 @@ br {
     font-size: 20px;
     position: relative;
     /* left: 20px; */
+    color: #50575F;
+    font-weight: 500;
+    opacity: 0.6;
+    font-family: 'Roboto'
+}
+
+.inputBox::placeholder {
+    font-size: 20px;
+    position: relative;
+    /* left: 50px; */
     color: #50575F;
     font-weight: 500;
     opacity: 0.6;
@@ -210,6 +256,11 @@ input:focus {
         padding: 0px;
     }
 
+    .inputBox-Wrapper {
+        width: 90%;
+    }
+
+    
     .searchbox-wrapper {
         width: 90%;
     }
