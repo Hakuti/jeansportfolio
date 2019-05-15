@@ -38,17 +38,42 @@ class App extends Component {
 <Router>  
 <Route render={({location}) => (
  <div style={styles.fill}>
-   <ul style={styles.nav}>
+    
+
+  <nav>
+    <div class="nav-wrapper blue">
+      <a href="#!" class="brand-logo"><Link to="/About">Create</Link></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/About">About</Link></li>
+        {/* <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li> */}
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
+   {/* <ul style={styles.nav}>
    <li style={styles.navItem}><Link to="/">Home</Link></li>
    <li style={styles.navItem}><Link to="/About">About</Link></li>
   </ul>
+
+  <ul class="sidenav">
+  <li>Test</li>
+  </ul> */}
 
 
   <div style={styles.content}> 
   <TransitionGroup>
     <CSSTransition
     key={location.key}
-    classNames="slide"
+    classNames="opacity"
     timeout={300}
     >
     <Switch location={location}>

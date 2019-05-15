@@ -179,7 +179,7 @@ export default class About extends Component {
                     <Route render={({location}) => (
                     <div style={styles.fill}>
                     <Route exact path="/about" render={() => (
-                        <Redirect to="/about/addname"/>
+                        <Redirect to="/About/addname"/>
                     )}/>
                     
                         {/* <p> {routes[this.state.currentPage]}</p> */}
@@ -212,7 +212,7 @@ export default class About extends Component {
                     timeout={300}
                     >
                     <Switch location={location}>
-                    <Route path='/about/addname' component={Topic}></Route>
+                    <Route path='/about/addname' component={AddName}></Route>
                     <Route path={`/about/addpartyname`} component={AddName}></Route>
                     <Route path={`/about/addalcohol`} render={(props) => <AddAlcohol {...props} ref={this.child} saveItems={this.saveItemsToStore}/>}/>
                     <Route path={`/about/randomroute`} component={Topic}></Route>

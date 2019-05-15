@@ -13,6 +13,8 @@ export default class AddName extends Component {
         return(
             <div style={styles.fill}>
             
+            <div style={{display: "flex", justifyContent: "center"}}>
+
             <div className="inputBox-Wrapper">
             <input className="inputBox" placeholder="Enter your party name" ref={(input) => { this.nameInput = input}}>
             </input>
@@ -20,6 +22,8 @@ export default class AddName extends Component {
 
                 {/* <input className="" ref={(input) => { this.nameInput = input}} >
                 </input> */}
+            </div>
+
             </div>
         );
     }

@@ -44,28 +44,60 @@
 } */
 
 /* slide enter */
-.slide-enter {
+.opacity-enter {
   opacity: 0;
   transform: scale(0.97) translateY(5px);
   z-index: 1;
 }
-.slide-enter.slide-enter-active {
+.opacity-enter.opacity-enter-active {
     opacity: 1;
     transform: scale(1) translateY(0);
     transition: opacity 3000ms linear 1000ms, transform 3000ms ease-in-out 1000ms;
-}
+} */
 
 /* slide exit */
-.slide-exit {
+.opacity-exit {
     opacity: 1;
     transform: scale(1) translateY(0);
     
 }
-.slide-exit.slide-exit-active {
+.opacity-exit.opacity-exit-active {
     opacity: 0;
     transform: scale(0.97) translateY(5px);
     transition: opacity 1500ms linear, transform 1500ms ease-out;
 }
-.slide-exit-done {
+.opacity-exit-done {
   opacity: 0;
+}
+
+
+/* START ENTER SLIDE TYPE TWO HERE*/
+
+/* ENTER TRANSITION */
+/* Declare transition start properties*/
+.slide-enter {
+  transform: translateX(-100vw);
+  opacity: 0;
+  position: absolute;
+  
+}
+
+/* Declare transition properties */
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 300ms linear 300ms;
+}
+
+/* EXIT TRANSITION */
+.slide-exit {
+  transform: translateX(0);
+  opacity: 1;
+  
+}
+
+.slide-exit.slide-exit-active {
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: all 300ms linear
 }
