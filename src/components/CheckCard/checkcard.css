@@ -181,7 +181,7 @@ br {
     border-bottom: none !important;
     position: relative;
     left: 10px;
-    font-size: 35px !important;
+    font-size: 22px !important;
 
 }
 
@@ -232,6 +232,8 @@ br {
     font-family: 'Roboto'
 }
 
+
+
 input:focus {
     border-bottom: none !important;
     box-shadow: none !important;
@@ -249,12 +251,15 @@ textarea:focus {
 /* disable auto-zoom on iphone input field focus */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
-	select:focus,
+	/* select:focus,
 	textarea:focus,
 	input:focus {
         font-size: 35px !important;
         
-	}
+    } */
+    .inputBox:focus {
+        font-size: 22px !important;
+    }
 }
 
 
@@ -281,6 +286,9 @@ textarea:focus {
         width: 90%;
     }
 
+    .inputBox-Wrapper {
+        margin-top: 20px !important;
+    }
     
     .searchbox-wrapper {
         width: 90%;
